@@ -1,0 +1,75 @@
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #3f83f8a6;
+    border-radius: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #3f83f8;
+    border-radius: 12px;
+}
+
+*::selection {
+    background: blue;
+    color: black;
+}
+
+body {
+	background-color: #171717;
+    margin:  0px;
+}
+
+.full-image {
+	width: 100%;
+    position: relative;
+}
+
+main {
+    width: auto;
+    height: auto;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:active {
+    color: white;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+article {
+    width: 1000px;
+    margin: auto;
+}
+
+article .project-banner {
+    height: 400px;
+    width: 1000px;
+    position: relative;
+}
+
+.hide {
+    display: none;
+}
+
+.banner {
+    width: 100%;
+    margin: auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}

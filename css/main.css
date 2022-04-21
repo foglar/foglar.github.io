@@ -1,0 +1,21 @@
+/* main.css */
+
+/* base */
+@import './base/reset.css';
+@import './base/typography.css';
+
+/* components */
+@import './components/components.css';
+
+/* pages */
+@import './pages/home.css';
+
+/* layout */
+@import './layout/layout.css';
+
+/* utils */
+@import './utils/utilities.css';
+@import './utils/page-size-custumization.css';
+
+/* vendors */
+@import './vendors/fonts-google.css';
