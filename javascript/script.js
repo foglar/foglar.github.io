@@ -1,5 +1,5 @@
 const typeWriter = document.getElementById('typewriter-text');
-const text = '#welcome to foglar&#8217s dojo';
+const text = '#welcome to SamSonSam dev';
 
 typeWriter.innerHTML = text;
 typeWriter.style.setProperty('--characters', text.length);
