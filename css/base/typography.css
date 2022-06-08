@@ -25,3 +25,21 @@ p {
     font-size: 20px;
     margin: 10px;
 }
+
+li {
+    color: #fff;
+    font-family: 'Fira Code', monospace;
+    font-size: 30px;
+    margin: 10px;
+    list-style-type: none;
+    display: inline;
+}
+
+label {
+    color: #fff;
+    font-family: 'Fira Code', monospace;
+    font-size: 30px;
+    margin: 10px;
+    list-style-type: none;
+    display: inline;
+}

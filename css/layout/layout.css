@@ -1,34 +1,33 @@
 /* Navigation */
 
 .head-nav {
+  position: sticky;
+  position: -webkit-sticky; /* Safari */
+  top: 0px;
 
-    position: sticky;
-    position: -webkit-sticky; /* Safari */
-    top: 0px;
+  background-color: #171717;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-bottom: 2px black;
+  padding-left: 10px;
+  padding-right: 10px;
 
-    background-color: #171717;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    border-bottom: 2px black;
-    padding-left: 10px;
-    padding-right: 10px;
-
-    z-index: 10;
+  z-index: 10;
 }
 
 .nav-btn {
-    margin-top: 5px;
-    margin-bottom: 5px;
-    padding-left: 5px;
-    padding-right: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .nav-btn::before {
-    content: '.';
+  content: ".";
 }
 
 .nav-btn::after {
-    content: '()';
+  content: "()";
 }
 
 /*
@@ -38,5 +37,61 @@
 */
 
 .code-animation:hover::after {
-    content: '()';
+  content: "()";
+}
+
+#autor {
+  position: unset;
+  width: 100px;
+  height: 100px;
+  margin: 5px;
+}
+
+.uz {
+  width: 80%;
+  margin: auto;
+  display: block;
+}
+
+.info {
+  width: 50%;
+  padding: 2px;
+
+  border: 5px dotted white;
+}
+
+.info > p {
+  margin: 50px;
+}
+
+.skill {
+  width: 40%;
+
+  padding: 2px;
+
+  border: 5px dotted white;
+}
+
+.projects {
+  width: 80%;
+  height: 600px;
+  display: block;
+
+  padding: 2px;
+
+  margin: 20px;
+
+  border: 5px dotted white;
+}
+
+.contact {
+  width: 12%;
+
+  padding: 2px;
+
+  margin: 20px;
+
+  border: 5px dotted white;
+
+  overflow: scroll;
 }

@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Nescius | Home</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>About me</title>
     <!--STYLESHEET-->
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/vendors/flickity.css" media="screen" />
@@ -18,24 +19,27 @@
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="favicon/apple-touch-icon.png"
+      href="https://foglar.github.io/favicon/apple-touch-icon.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="favicon/favicon-32x32.png"
+      href="https://foglar.github.io/favicon/favicon-32x32.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="favicon/favicon-16x16.png"
+      href="https://foglar.github.io/favicon/favicon-16x16.png"
     />
-    <link rel="manifest" href="favicon/site.webmanifest" />
+    <link
+      rel="manifest"
+      href="https://foglar.github.io/favicon/site.webmanifest"
+    />
     <link
       rel="mask-icon"
-      href="favicon/safari-pinned-tab.svg"
+      href="https://foglar.github.io/favicon/safari-pinned-tab.svg"
       color="#5bbad5"
     />
     <meta name="msapplication-TileColor" content="#da532c" />
@@ -49,42 +53,6 @@
       src="https://kit.fontawesome.com/1e841d8fcf.js"
       crossorigin="anonymous"
     ></script>
-    <!-- Primary Meta Tags -->
-    <title>Nescius | Domů</title>
-    <meta name="title" content="Nescius | Domů" />
-    <meta
-      name="description"
-      content="Potřebujete rychle a levně jednoduchou webovku a nevíte jak na to? Tak to jste na správném místě. Jednoduchý a elegantní web - zdarma!"
-    />
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="http://nescius.chytrak.cz/" />
-    <meta property="og:title" content="Nescius | Domů" />
-    <meta
-      property="og:description"
-      content="Potřebujete rychle a levně jednoduchou webovku a nevíte jak na to? Tak to jste na správném místě. Jednoduchý a elegantní web - zdarma!"
-    />
-    <meta property="og:image" content="media/preview.png" />
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="http://nescius.chytrak.cz/" />
-    <meta property="twitter:title" content="Nescius | Domů" />
-    <meta
-      property="twitter:description"
-      content="Potřebujete rychle a levně jednoduchou webovku a nevíte jak na to? Tak to jste na správném místě. Jednoduchý a elegantní web - zdarma!"
-    />
-    <meta property="twitter:image" content="media/preview.png" />
-    <!--RichSnippets-->
-    <script type="application/ld+json">
-      {
-        "@context": "http://schema.org",
-        "@type": "Organization",
-        "url": "http://nescius.chytrak.cz/",
-        "logo": "http://nescius.chytrak.cz/logo.png"
-      }
-    </script>
   </head>
   <body>
     <header class="head-nav">
@@ -93,39 +61,53 @@
           <a href="index.html">Home</a>
         </li>
         <li class="nav-btn code-animation">
-          <a href="about-me.html">About me</a>
+          <a href="about-me/index.html">About me</a>
         </li>
       </nav>
     </header>
-    <main>
-      <div class="welcome-banner">
-        <img
-          class="full-image"
-          src="media/hacking-bg.jpg"
-          alt="HTML code on display"
-        />
-        <div class="typewriter-effect welcome-title">
-          <div class="text" id="typewriter-text"></div>
+    <main class="uz">
+      <div id="autor-me">
+        <div class="info left">
+          <img
+            id="autor"
+            class="prof-pic left"
+            src="media\prof-pic.png"
+            alt="Me"
+          />
+          <h2 class="margin" align="center">SamSonSam</h2>
+          <h3 align="center">Ing et Ing</h3>
+          <p align="center">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi natus
+            voluptates nobis dicta hic est consectetur, veniam eaque
+            reprehenderit. Excepturi saepe ipsum accusantium mollitia quo fugit
+            veritatis voluptas autem modi!
+          </p>
         </div>
-        <img
-          class="prof-pic"
-          src="media/prof-pic.png"
-          width="300"
-          height="300"
-          alt="mars - my profile picture"
-        />
-        <div class="planet-center">
-          <div class="planet-params planet-blue"></div>
-          <div class="planet-params planet-yellow"></div>
-          <div class="planet-params planet-green"></div>
-          <div class="planet-params planet-red"></div>
+        <div class="skill right">
+          <h1>Skills</h1>
+          <ul>
+            <li>
+              <label for="python"
+                >Python <i class="fa-brands fa-python"></i
+              ></label>
+              <progress id="python" value="10" max="100"></progress>
+            </li>
+            <li>
+              <label for="Java">Java <i class="fa-brands fa-java"></i></label>
+              <progress id="Java" value="0" max="100"></progress>
+            </li>
+            <li>
+              <label for="google"
+                >Google <i class="fa-brands fa-google"></i
+              ></label>
+              <progress id="google" value="120" max="100"></progress>
+            </li>
+          </ul>
         </div>
-      </div>
-      <div id="content-sections">
-        <div id="best-projects">
+        <div class="projects right">
           <header>
             <h1>
-              <a href="#best-projects">Best Projects</a>
+              <a href="#best-projects">Projects</a>
             </h1>
           </header>
           <script src="javascript/flickity.pkgd.min.js"></script>
@@ -290,110 +272,17 @@
             </div>
           </div>
         </div>
-        <div class="white">
-          <div id="discord" class="banner">
-            <h1 class="left">
-              <a href="#discord" class="text-black"
-                >Join our discord server...</a
-              >
-            </h1>
-            <div class="right x-margin">
-              <widgetbot
-                server="984063810283372608"
-                channel="984063810283372608"
-                width="900"
-                height="600"
-              ></widgetbot>
-              <script src="https://cdn.jsdelivr.net/npm/@widgetbot/html-embed"></script>
-              <script
-                src="https://cdn.jsdelivr.net/npm/@widgetbot/crate@3"
-                async
-                defer
-              >
-                new Crate({
-                  server: '86453498666878',
-                  channel: '909025554789961748',
-                })
-              </script>
-            </div>
-            <div class="box left width20">
-              <p class="center x-margin text-black">and enjoy a lot of fun!</p>
-              <button
-                class="box-btn center x-margin"
-                onclick="window.location.href='https://foglar.github.io/premium'"
-              >
-                <i class="fa-brands fa-discord fa-2xl"></i
-                ><span class="center"> Join</span>
-              </button>
-            </div>
+        <div class="contact left">
+            <ul>
+              <li>
+                Samsonsam@gmail.com
+              </li>
+              <li>
+                Sidlich20677
+              </li>
+            </ul>
           </div>
-        </div>
-        <div id="about-me">
-          <h1><a href="#about-me">About Me</a></h1>
-          <div class="centralized-article">
-            <img
-              class="small-prof-pic"
-              alt="mars - my profile picture"
-              src="media/prof-pic.png"
-              width="105"
-              height="105"
-            />
-            <a href="http://foglar.github.io/premium">
-              <img
-                class="margin"
-                align="right"
-                src="https://github-readme-stats.vercel.app/api?username=sidlich508&show_icons=true&theme=dark"
-              />
-            </a>
-            <p class="center">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque
-              blanditiis, quis ipsa doloremque autem minima vero, sint
-              voluptatem cupiditate possimus dolorem enim pariatur modi!
-              Cupiditate iure sint labore neque modi.
-            </p>
-            <p class="center">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi,
-              hic aspernatur. Ducimus nihil porro est ullam corrupti id
-              reiciendis neque, libero possimus fugiat iste voluptatum,
-              assumenda nemo laudantium recusandae in.
-            </p>
-            <p class="center">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum id
-              provident eum? Nisi vitae vero quo deleniti. Iure eum id,
-              molestiae reprehenderit culpa laboriosam neque dolor? Voluptas
-              magnam cupiditate quibusdam.
-            </p>
-            <script src="javascript/script.js"></script>
-            <p class="center">
-              Feel free to contact me on
-              <i class="fa-brands fa-discord"></i> discord, my name is
-              <span
-                class="copy"
-                onclick="copy(foglar.github.io/premium)"
-                >https://www.mojewebovky.borec.cz</span
-              >
-              or on <br /><i class="fa-solid fa-at"></i
-              ><a class="copy" href="https://foglar.github.io/premium"
-                >xxx748061@gmail.com</a
-              >
-            </p>
-            <div class="banner-social">
-              <a href="https://foglar.github.io/premium"
-                ><i class="fa-brands fa-github fa-2xl move-icon"></i
-              ></a>
-              <a href="https://foglar.github.io/premium"
-                ><i class="fa-brands fa-twitter fa-2xl move-icon"></i
-              ></a>
-              <a href="https://foglar.github.io/premium"
-                ><i class="fa-solid fa-chess fa-2xl move-icon"></i
-              ></a>
-            </div>
-          </div>
-        </div>
       </div>
     </main>
-    <footer>
-      <p><i class="fa-solid fa-copyright"></i> 2021 - 2022 bruh.best.cz</p>
-    </footer>
   </body>
 </html>
