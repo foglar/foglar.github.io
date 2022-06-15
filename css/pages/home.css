@@ -121,3 +121,157 @@
     margin-left: 5%;
     margin-right: 5%;
 }
+
+
+.sun {
+    height: 139px;
+    width: 139px;
+    background-color: rgb(255, 251, 0);
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 5;
+}
+
+.planet-params {
+    padding: 100px;
+    position: absolute;
+    border-radius: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    animation: rotation 6s infinite linear;
+}
+
+.planet-params::before {
+    content: "";
+    position: absolute;
+    left: -20px;
+    top: -20px;
+    border-radius: 50%;
+    margin: 51px;
+}
+
+.planet-mercur {
+    width: 5.7px;
+    height: 5.7px;
+    /* background-color: black; */
+    animation: rotation 6s infinite linear;
+}
+  
+.planet-mercur::before {
+    width:2.4397px;
+    height: 2.4397px;
+    background-color: gray;
+    z-index: 5;
+}
+
+.planet-venus {
+    width: 108.2px;
+    height: 108.2px;
+    /* background-color: black; */
+    animation: rotation 7s infinite linear;
+}
+
+.planet-venus::before {
+    width: 6px;
+    height: 6px;
+    background-color: orange;
+    z-index: 6;
+}
+
+.planet-earth {
+    width: 149.6px;
+    height: 149.6px;
+    /* background-color: black; */
+    animation: rotation 6.5s infinite linear;
+}
+
+.planet-earth::before {
+    width: 6px;
+    height: 6px;
+    background-color: blue;
+    z-index: 7;
+}
+ 
+.planet-mars {
+    width: 227.9px;
+    height: 227.9px;
+    /* background-color: black; */
+    animation: rotation 5.5s infinite linear;
+}
+
+.planet-mars::before {
+    width: 3.387px;
+    height: 3.387px;
+    background-color: red;
+    z-index: 7;
+}
+
+.planet-jupiter {
+    width: 778.3px;
+    height: 778.3px;
+    /* background-color: black; */
+    animation: rotation 5.5s infinite linear;
+}
+
+.planet-jupiter::before {
+    width: 71.492px;
+    height: 71.492px;
+    background-color: bisque;
+    z-index: 7;
+}
+
+.planet-saturn {
+    width: 1429px;
+    height: 1429px;
+    /* background-color: black; */
+    animation: rotation 5.5s infinite linear;
+}
+
+.planet-saturn::before {
+    width: 60.268px;
+    height: 60.268px;
+    background-color: beige;
+    z-index: 7;
+}
+
+.planet-uran {
+    width: 2875px;
+    height: 2875px;
+    /* background-color: black; */
+    animation: rotation 5.5s infinite linear;
+}
+
+.planet-uran::before {
+    width: 	51.118px;
+    height: 51.118px;
+    background-color: #1DD7D4;
+    z-index: 7;
+}
+
+.planet-neptun {
+    width: 4504px;
+    height: 4504px;
+    /* background-color: black; */
+    animation: rotation 5.5s infinite linear;
+}
+
+.planet-neptun::before {
+    width: 49.528px;
+    height: 49.528px;
+    background-color: #2D83DE;
+    z-index: 7;
+}
+
+@keyframes rotation {
+    0% {
+        transform: translate(-50%, -50%) rotate(-360deg);
+    }
+}
+
+
+.sus {
+    position: absolute;
+    bottom: 3px;
+}
