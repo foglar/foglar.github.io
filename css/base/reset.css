@@ -1,21 +1,40 @@
 :root {
-    
+  --fontPrimary:'JetBrains Mono', monospace;
+  --fontSecondary:'Roboto Mono', monospace;
+  --fontHeader:'Source Sans Pro', sans-serif;
+}
+
+html {
+  width: 100vw;
+  width: 100dvw;
+  height: auto;
+  margin: 0px;
 }
 
 body {
-    min-height: 100vh;
-    min-height: 100dvh;
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    margin: 0;
-    background-color: var(--bg);
+  width: 100dvw;
+  width: 100vw;
+  background-color: var(--bg);
+  margin: 0px;
 }
 
-body > * {
-    border: blue solid 1px;
+main {
+  margin: 10px auto 10px auto;
 }
 
 main > section {
-    width: 100vw;
-    height: 100dvw;
+  width: 90dvw;
+  width: 90vw;
+  height: 95dvh;
+  height: 95vh;
+  margin: auto;
+  padding: 0px;
+}
+
+.color-white {
+  color: var(--text);
+}
+
+.tab {
+  margin-right: 10px;
 }

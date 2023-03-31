@@ -1,0 +1,15 @@
+.icon {
+    width: 30px;
+    height: 30px;
+}
+
+.icon::before {
+    width: 28px;
+    height: 32px;
+    animation: none;
+}
+
+.icon:hover {
+    animation: bounce;
+    animation-duration: 0.5s; /* don't forget to set a duration! */
+}

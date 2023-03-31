@@ -4,24 +4,220 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>foglar | Home</title>
-    <link rel="stylesheet" href="css/main.css" />
-    <script defer src="javascript/script.js"></script>
+    <title>foglar | home</title>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="media/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="media/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="media/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="media/favicon/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="media/favicon/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <link rel="shortcut icon" href="media/favicon/favicon.ico" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta
+      name="msapplication-config"
+      content="media/favicon/browserconfig.xml"
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <!--STYLESHEET AND SCRIPTS-->
+    <link rel="stylesheet" href="./css/main.css" />
+    <link
+      rel="preload"
+      href="Mona-Sans.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <script defer src="./js/script.js"></script>
+    <script
+      src="https://kit.fontawesome.com/1e841d8fcf.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
-  <body class="light">
-    <header>
+  <body class="dark">
+    <header id="hello">
       <nav>
+        <a href="https://www.github.com/foglar"
+          ><img class="logo" src="/media/prof-pic.png"
+        /></a>
         <ul>
-          <li><a href="welcome">Hello</a></li>
-          <li><a href="about">About</a></li>
-          <li class="theme-item">
-            <a id="light" href="#">light</a>
-          </li>
-          <li class="theme-item">
-            <a id="dark" href="#">dark</a>
-          </li>
+          <li>foglar@portfolio(~)$</li>
+          <li class="nav-item"><a href="#projects">cd /projects</a></li>
+          <li class="nav-item"><a href="#contact">cd /about\ me</a></li>
         </ul>
+        <div>
+          <a id="light" href="#"><i class="fa-solid fa-sun"></i></a>
+          <a id="dark" href="#"><i class="fa-solid fa-moon"></i></a>
+        </div>
       </nav>
     </header>
+    <main>
+      <section id="welcome">
+        <div id="home">
+          <div class="stats">
+            <div>
+              <h1>Hi, I am Foglar!</h1>
+              <ul class="description">
+                <li>- I love Python <i class="fa-brands fa-python"></i></li>
+                <li>- I use Linux <i class="fa-brands fa-linux"></i></li>
+                <li>
+                  - Interested in hacking
+                  <i class="fa-solid fa-user-secret"></i>
+                </li>
+                <li>
+                  - Playing with IoT <i class="fa-brands fa-raspberry-pi"></i>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <picture>
+              <source
+                srcset="
+                  https://github-readme-stats.vercel.app/api?username=foglar&show_icons=true&theme=merko
+                "
+                media="(prefers-color-scheme: dark)"
+              />
+              <source
+                srcset="
+                  https://github-readme-stats.vercel.app/api?username=foglar&show_icons=true
+                "
+                media="(prefers-color-scheme: dark), (prefers-color-scheme: no-preference)"
+              />
+              <img
+                src="https://github-readme-stats.vercel.app/api?username=foglar&show_icons=true"
+              />
+            </picture>
+          </div>
+        </div>
+        <div class="arrow-key">
+          <i class="fa-solid fa-arrow-down fa-fade fa-2xl color-white"></i>
+        </div>
+      </section>
+      <section id="projects">
+        <h2><i class="fa-solid fa-bars-progress"></i> Projects</h2>
+        <div class="projects">
+          <a class="card-big" href="https://github.com/foglar/Cobra-Project">
+            <img
+              align="center"
+              src="https://github-readme-stats.vercel.app/api/pin/?username=foglar&repo=Cobra-Project&theme=merko"
+            />
+          </a>
+          <a href="https://github.com/foglar/safeMail">
+            <img
+              align="center"
+              src="https://github-readme-stats.vercel.app/api/pin/?username=foglar&repo=safeMail&theme=merko"
+            />
+          </a>
+          <a class="card-big" href="https://github.com/foglar/Moon_landing">
+            <img
+              align="center"
+              src="https://github-readme-stats.vercel.app/api/pin/?username=foglar&repo=Moon_landing&theme=merko"
+            />
+          </a>
+          <a href="https://github.com/foglar/Project-Starter">
+            <img
+              align="center"
+              src="https://github-readme-stats.vercel.app/api/pin/?username=foglar&repo=Project-Starter&theme=merko"
+            />
+          </a>
+          <a class="card-big" href="https://github.com/foglar/Ghost_game">
+            <img
+              align="center"
+              src="https://github-readme-stats.vercel.app/api/pin/?username=foglar&repo=Ghost_game&theme=merko"
+            />
+          </a>
+          <a href="https://github.com/foglar/Bubble_blaster">
+            <img
+              align="center"
+              src="https://github-readme-stats.vercel.app/api/pin/?username=foglar&repo=Bubble_blaster&theme=merko"
+            />
+          </a>
+          <a
+            class="card card-small"
+            href="https://foglar.github.io/images/Planetum-1-color_Filip-Kohout.png"
+          >
+            <span class="card-head"
+              ><i class="fa-solid fa-book-bookmark tab"></i>Logos for Planetum 1
+              satellite</span
+            >
+            <span class="card-text"
+              ><br /><br />Logo painted for planetum challenge. Didn't won, but
+              I like it.</span
+            >
+          </a>
+        </div>
+      </section>
+      <section id="contact">
+        <h2><i class="fa-solid fa-address-book"></i> About me</h2>
+        <div class="my-profile">
+          <div class="profile">
+            <img class="profile-picture" src="/media/prof-pic.png" />
+            <div class="links-bar">
+              <a href="https://www.chess.com/member/foglar">
+                <i
+                  class="icon fa-solid fa-chess-knight fa-2xl animate__animated"
+                ></i>
+              </a>
+              <a href="https://github.com/foglar">
+                <i
+                  class="icon fa-brands fa-github fa-2xl animate__animated"
+                ></i>
+              </a>
+              <a href="https://stackoverflow.com/users/16794860/foglar">
+                <i
+                  class="icon fa-brands fa-stack-overflow fa-2xl animate__animated"
+                ></i>
+              </a>
+              <a href="https://twitter.com/foglar4">
+                <i
+                  class="icon fa-brands fa-twitter fa-2xl animate__animated"
+                ></i>
+              </a>
+            </div>
+          </div>
+          <div class="about-me-box">
+            <p>
+              I am a 15 years old student from Czech Republic. I am interested
+              in hacking, programming and IoT, currently learning Python, C++
+              and JavaScript. I am also interested in cybersecurity an ethical
+              hacking.
+            </p>
+            <p>
+              Feel free to contact me via my
+              <a href="https://github.com/foglar/safeMail">safeMail</a> app (My
+              public key is <a href="/media/my_pubkey.txt">here</a> and my email
+              is
+              <a href="mailto:odesilatelneznamy@gmail.com"
+                >odesilatelneznamy@gmail.com</a
+              >) or discord (my tag is <b>Foglar#9431</b>). I will be happy to
+              answer!!!
+            </p>
+            <a href="https://github.com/foglar">
+              <img
+                src="https://github-readme-stats.vercel.app/api/top-langs/?username=foglar&layout=compact&theme=merko"
+              />
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer></footer>
   </body>
 </html>

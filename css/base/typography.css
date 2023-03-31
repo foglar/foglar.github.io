@@ -1,0 +1,28 @@
+h1 {
+    color: var(--text);
+    font-family: var(--fontPrimary);
+    font-size: 2.5em;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+h2 {
+    color: var(--text);
+    font-family: var(--fontPrimary);
+    font-size: 2em;
+    font-weight: 400;
+    line-height: 1;
+}
+
+p {
+    color: var(--text);
+    font-family: var(--fontSecondary);
+    font-size: 1.2em;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+a:any-link {
+    color: var(--text);
+}
