@@ -1,14 +1,30 @@
-const typeWriter = document.getElementById('typewriter-text');
-const text = '#welcome to foglar&#8217s dojo';
+// DOM Elements
 
-typeWriter.innerHTML = text;
-typeWriter.style.setProperty('--characters', text.length);
+const darkButton = document.getElementById('dark');
+const lightButton = document.getElementById('light');
+const solarButton = document.getElementById('solar');
+const body = document.body;
 
-function copy(that){
-  var inp =document.createElement('input');
-  document.body.appendChild(inp)
-  inp.value =that.textContent
-  inp.select();
-  document.execCommand('copy',false);
-  inp.remove();
-  }
+
+// Apply the cached theme on reload
+
+const theme = localStorage.getItem('theme');
+const isSolar = localStorage.getItem('isSolar');
+
+if (theme) {
+  body.classList.add(theme);
+  isSolar && body.classList.add('solar');
+}
+
+// Button Event Handlers
+
+darkButton.onclick = () => {
+  body.classList.replace('light', 'dark');
+  localStorage.setItem('theme', 'dark');
+};
+
+lightButton.onclick = () => {
+  body.classList.replace('dark', 'light');
+
+  localStorage.setItem('theme', 'light');
+};

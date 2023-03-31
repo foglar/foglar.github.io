@@ -2,10 +2,11 @@
 
 /* base */
 @import './base/reset.css';
+@import './base/themes.css';
 @import './base/typography.css';
 
 /* components */
-@import './components/components.css';
+@import './components/navbar.css';
 
 /* pages */
 @import './pages/home.css';
