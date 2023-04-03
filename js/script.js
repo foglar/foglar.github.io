@@ -17,7 +17,25 @@ darkButton.onclick = () => {
 };
 
 lightButton.onclick = () => {
-  body.classList.replace('dark', 'light');
-
-  localStorage.setItem('theme', 'light');
+  question = window.confirm('Are you sure you want to proceed?')
+  if (question == true) {
+    body.classList.replace('dark', 'light');
+    localStorage.setItem('theme', 'light');
+  } else {
+    body.classList.replace('light', 'dark');
+    localStorage.setItem('theme', 'light');
+  }
 };
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    console.log(entry);
+    if (entry.isIntersecting) {
+      entry.target.classList.add('anim-on-scroll-show');
+    } else {
+      entry.target.classList.remove('anim-on-scroll-show');}
+  });
+});
+
+const hiddenElements = document.querySelectorAll('.anim-on-scroll');
+hiddenElements.forEach((el) => observer.observe(el));

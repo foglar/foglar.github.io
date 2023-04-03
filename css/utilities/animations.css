@@ -1,15 +1,103 @@
+.fa-sun {
+ filter: drop-shadow(none);
+}
+
+.fa-sun:hover {
+    color: var(--yellow);
+    filter: drop-shadow(0 0 0.5rem var(--yellow));
+}
+
+.fa-moon {
+    filter: drop-shadow(none);
+}
+
+.fa-moon:hover {
+    color: var(--white);
+    filter: drop-shadow(0 0 0.5rem var(--white));
+}
+
 .icon {
-    width: 30px;
-    height: 30px;
+  width: 30px;
+  height: 30px;
 }
 
 .icon::before {
-    width: 28px;
-    height: 32px;
-    animation: none;
+  width: 28px;
+  height: 32px;
+  animation: none;
 }
 
 .icon:hover {
-    animation: bounce;
-    animation-duration: 0.5s; /* don't forget to set a duration! */
+  animation: bounce;
+  animation-duration: 0.5s; /* don't forget to set a duration! */
+  animation-delay: 0.1s;
+}
+
+@media (prefers-reduced-motion) {
+  .anim-on-scroll {
+    opacity: 1;
+  }
+}
+
+.anim-on-scroll {
+  opacity: 0;
+  filter: blur(10px);
+  transform: translateX(-100%);
+  transition: all 1s;
+}
+
+.anim-on-scroll-show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+@media (min-screen-width: 768px) {
+  .anim-on-scroll:nth-child(2),
+  .anim-on-scroll:nth-child(5),
+  .anim-on-scroll:nth-child(8) {
+    transition-delay: 0.2s;
+  }
+
+  .anim-on-scroll:nth-child(3),
+  .anim-on-scroll:nth-child(6),
+  .anim-on-scroll:nth-child(9) {
+    transition-delay: 0.4s;
+  }
+}
+
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+}
+
+.hover-underline-animation::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.hover-underline-squiggle {
+    background: none;
+}
+
+.hover-underline-squiggle:hover {
+  background: linear-gradient(to bottom, var(--yellow) 0%, var(--yellow) 100%);
+  background-position: 0 100%;
+  background-repeat: repeat-x;
+  background-size: 2px 2px;
+  color: inherit;
+  text-decoration: none;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.squiggle{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-15px);}}%3C/style%3E%3Cpath fill='none' stroke='%23ffc107' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
+  background-size: auto 4px;
 }

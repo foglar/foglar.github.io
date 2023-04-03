@@ -2,6 +2,7 @@
   --fontPrimary:'JetBrains Mono', monospace;
   --fontSecondary:'Roboto Mono', monospace;
   --fontHeader:'Source Sans Pro', sans-serif;
+  animation-duration: 1s;
 }
 
 html {
