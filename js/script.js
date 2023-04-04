@@ -17,7 +17,7 @@ darkButton.onclick = () => {
 };
 
 lightButton.onclick = () => {
-  question = window.confirm('Are you sure you want to proceed?')
+  question = window.confirm('Are you sure you want to proceed? [I am not taking personal responsibility for your actions]')
   if (question == true) {
     body.classList.replace('dark', 'light');
     localStorage.setItem('theme', 'light');

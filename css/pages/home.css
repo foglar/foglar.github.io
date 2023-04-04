@@ -1,5 +1,5 @@
 #home {
-  width: 80vw;
+  width: 90vw;
   height: 80vh;
   height: 80dvh;
   margin-left: auto;
@@ -10,7 +10,7 @@
 }
 
 #home > div {
-  width: 40vw;
+  width: 45vw;
   height: 80vh;
   height: 80dvh;
   display: flex;
