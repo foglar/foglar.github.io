@@ -1,4 +1,25 @@
 @media (max-width: 972px) {
+  nav {
+    padding: 0.2rem 0 0.2rem 0;
+  }
+
+nav > ul > li > a,
+#light, #dark {
+  font-size: 0.8rem;
+}
+
+.logo {
+  width: 0.8rem;
+  height: 0.8rem;
+}
+
+  nav > ul {
+    margin: 0;
+  }
+  nav > ul > :first-child {
+    display: none;
+  }
+
     #home {
       width: 90vw;
       height: auto;
@@ -30,5 +51,17 @@
       margin-left: auto;
       margin-right: auto;
       display: block;
+    }
+
+    #projects {
+      width: 100vw;
+      height: auto;
+      display: block;
+    }
+    .projects {
+      width: 95vw;
+    }
+    .projects > a {
+      margin: 0;
     }
   }
