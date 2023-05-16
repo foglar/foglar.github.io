@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="cz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Brigáda kalkulátor</title>
+    <script>
+      function calculate() {
+        // Get the value of the input fields
+        let money = document.getElementById("money").value;
+        let income = document.getElementById("prijem").value;
+        let hours = document.getElementById("hours").value;
+        let days = document.getElementById("days").value;
+
+        if (hours * days > 40) {
+          document.getElementById("result").innerHTML =
+            "Nemůžeš pracovat víc než 40 hodin týdně";
+          return;
+        }
+
+        // Check if the checkbox is checked and calculate the income after tax
+        if (document.getElementById("fee").checked) {
+          income = income * 0.85;
+        }
+
+        // Get the number of hours, days, weeks
+        let hours_to_work = money / income;
+
+        if (
+          document.getElementById("macDonald").checked ||
+          hours_to_work <= 70
+        ) {
+          let hours_to_work_lower = 70;
+          let low_income = 70 * income;
+          hours_to_work = hours_to_work - hours_to_work_lower;
+          income = income + 10;
+          hours_to_work = money / income;
+        }
+
+        let days_to_work = hours_to_work / hours;
+        let weeks_to_work = days_to_work / days;
+
+        // Round the number of weeks down to get the number of full weeks and calculate the remaining days
+        let rounded_down = Math.floor(weeks_to_work);
+        // Get the remaining days
+        let weeks_days_remaining = (weeks_to_work - rounded_down) * days;
+        // Round the remaining days up to get the number of full days
+        let weeks_days = Math.floor(weeks_days_remaining);
+        // Get remaining hours
+        let weeks_days_hours_remaining =
+          (weeks_days_remaining - weeks_days) * hours;
+
+        if (money == "" || hours == "" || days == "") {
+          document.getElementById("result").innerHTML =
+            "Vyplňte prosím všechna pole";
+          return;
+        }
+
+        let response =
+          "Celkem odpracovaných hodin: " +
+          Math.round(hours_to_work) +
+          "<br>Celkem odpracovaných dní: " +
+          Math.round(days_to_work) +
+          "<br>Celkem odpracovaných týdnů: " +
+          Math.round(weeks_to_work) +
+          "<br><br>";
+        // Format the response
+        response =
+          response +
+          "Vyděláš si za " +
+          rounded_down +
+          " týdnů, " +
+          weeks_days +
+          " dní a " +
+          Math.round(weeks_days_hours_remaining) +
+          " hodiny";
+        // Display the result
+        document.getElementById("result").innerHTML = response;
+      }
+    </script>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        width: 100%;
+        max-width: 560px;
+        margin: 0 auto;
+      }
+      form {
+        width: 100%;
+        max-width: 550px;
+        margin: 0 auto;
+      }
+
+      fieldset {
+        background-color: #f7f7f8;
+        border: 1px solid #ccc;
+        padding: 20px;
+      }
+
+      legend {
+        padding: 0.2rem 0.5rem;
+        font-size: 90%;
+        text-align: left;
+      }
+
+      input[type="number"] {
+        width: 8rem;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+      }
+
+      input[type="checkbox"] {
+        width: 1rem;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        accent-color: #4caf50;
+      }
+
+      input[type="button"] {
+        width: 100%;
+        background-color: #4caf50;
+        color: white;
+        padding: 12px 20px;
+        margin: 8px 0;
+        border: none;
+        box-sizing: border-box;
+      }
+
+      input[type="button"]:hover {
+        background-color: #45a049;
+      }
+
+      hr {
+        border: 1px solid #f1f1f1;
+        margin-bottom: 25px;
+      }
+
+      #macDonald {
+        accent-color: #ffb719;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Brigáda kalkulátor</h1>
+    <form>
+      <fieldset>
+        <legend>Kalkulátor</legend>
+        <label for="money">Peněžní částka (Kč):</label>
+        <input
+          type="number"
+          id="money"
+          name="money"
+          min="0"
+          max="1000000"
+          step="100"
+          value="20000"
+          placeholder="Kolik chci vydělat peněz? => 20000"
+        />
+        <br />
+        <label for="prijem">Příjem na hodinu: (Kč)</label>
+        <input
+          type="number"
+          id="prijem"
+          name="prijem"
+          min="103"
+          step="1"
+          value="123"
+          placeholder="Kolik dostanu peněz za hodinu? => 123"
+        />
+        <label for="fee">Daň</label>
+        <input
+          type="checkbox"
+          id="fee"
+          name="fee"
+          min="0"
+          max="100"
+          step="1"
+          value="15"
+        />
+        <br />
+        <hr />
+        <label for="hours">Počet hodin denně: (hod.)</label>
+        <input
+          type="number"
+          id="hours"
+          name="hours"
+          min="0"
+          max="8"
+          step="1"
+          value="4"
+          placeholder="Kolik hodin denně chci pracovat? (max. 8 hodin)"
+        />
+        <br />
+        <label for="days">Počet dní týdně: (týd.)</label>
+        <input
+          type="number"
+          id="days"
+          name="days"
+          min="0"
+          max="7"
+          step="1"
+          value="5"
+          placeholder="Kolik dní týdně chci pracovat? (max. 7 dní)"
+        />
+        <br />
+        <hr />
+        <label for="macDonald">MacDonalds</label>
+        <input
+          type="checkbox"
+          id="macDonald"
+          name="macDonald"
+          value="macDonald"
+        />
+      </fieldset>
+      <fieldset>
+        <legend>Výsledky</legend>
+        <input type="button" value="Vypočítat" onclick="calculate()" />
+        <p id="result"></p>
+      </fieldset>
+    </form>
+  </body>
+</html>
