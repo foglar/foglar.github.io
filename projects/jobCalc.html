@@ -22,6 +22,8 @@
         // Check if the checkbox is checked and calculate the income after tax
         if (document.getElementById("fee").checked) {
           income = income * 0.85;
+        } else {
+          income = income * 1
         }
 
         // Get the number of hours, days, weeks
@@ -29,12 +31,13 @@
 
         if (
           document.getElementById("macDonald").checked ||
-          hours_to_work <= 70
+          hours_to_work >= 70
         ) {
           let hours_to_work_lower = 70;
           let low_income = 70 * income;
           hours_to_work = hours_to_work - hours_to_work_lower;
-          income = income + 10;
+          let x = income + 10;
+          income = x;
           hours_to_work = money / income;
         }
 
@@ -77,6 +80,48 @@
           " hodiny";
         // Display the result
         document.getElementById("result").innerHTML = response;
+      }
+    </script>
+    <script>
+      function calculate2() {
+        let weeks = document.getElementById("weeks").value;
+        let income2 = document.getElementById("prijem2").value;
+        let hours2 = document.getElementById("hours2").value;
+        let days2 = document.getElementById("days2").value;
+
+        if (hours2 * days2 > 40) {
+          document.getElementById("result2").innerHTML =
+            "Nemůžeš pracovat víc než 40 hodin týdně";
+          return;
+        }
+
+        if (document.getElementById("fee2").checked) {
+          income2 = income2 * 0.85;
+        }
+        let days_to_work2 = weeks * days2;
+        let hours_to_work2 = days_to_work2 * hours2;
+
+        /*if (
+          document.getElementById("macDonald2").checked ||
+          hours_to_work2 <= 70
+        ) {
+          let hours_to_work_lower2 = 70;
+          let low_income2 = 70 * income2;
+          hours_to_work2 = hours_to_work2 - hours_to_work_lower2;
+          income2 = income2 + 10;
+          hours_to_work2 = weeks * days2 * hours2;
+        }*/
+
+        money = hours_to_work2 * income2;
+        response2 =
+          "Celkem odpracovaných hodin: " +
+          Math.round(hours_to_work2) +
+          "<br>Celkem odpracovaných dní: " +
+          Math.round(days_to_work2) +
+          "<br>Vyděláš si " +
+          money +
+          " Kč";
+        document.getElementById("result2").innerHTML = response2;
       }
     </script>
     <style>
@@ -138,7 +183,7 @@
         margin-bottom: 25px;
       }
 
-      #macDonald {
+      #macDonald, #macDonald2 {
         accent-color: #ffb719;
       }
     </style>
@@ -147,7 +192,7 @@
     <h1>Brigáda kalkulátor</h1>
     <form>
       <fieldset>
-        <legend>Kalkulátor</legend>
+        <legend>Kalkulátor času</legend>
         <label for="money">Peněžní částka (Kč):</label>
         <input
           type="number"
@@ -219,6 +264,82 @@
         <legend>Výsledky</legend>
         <input type="button" value="Vypočítat" onclick="calculate()" />
         <p id="result"></p>
+      </fieldset>
+    </form>
+    <form>
+      <fieldset>
+        <legend>Kalkulátor výdělku</legend>
+        <label for="weeks">Čas v týdnech:</label>
+        <input
+          type="number"
+          id="weeks"
+          name="weeks"
+          min="0"
+          max="1000000"
+          step="1"
+          value="2"
+          placeholder="Kolik času můžu být na brigádě"
+        />
+        <br />
+        <label for="prijem2">Příjem na hodinu: (Kč)</label>
+        <input
+          type="number"
+          id="prijem2"
+          name="prijem2"
+          min="103"
+          step="1"
+          value="123"
+          placeholder="Kolik dostanu peněz za hodinu? => 123"
+        />
+        <label for="fee2">Daň</label>
+        <input
+          type="checkbox"
+          id="fee2"
+          name="fee2"
+          min="0"
+          max="100"
+          step="1"
+          value="15"
+        />
+        <br />
+        <hr />
+        <label for="hours2">Počet hodin denně: (hod.)</label>
+        <input
+          type="number"
+          id="hours2"
+          name="hours2"
+          min="0"
+          max="8"
+          step="1"
+          value="4"
+          placeholder="Kolik hodin denně chci pracovat? (max. 8 hodin)"
+        />
+        <br />
+        <label for="days2">Počet dní týdně: (týd.)</label>
+        <input
+          type="number"
+          id="days2"
+          name="days2"
+          min="0"
+          max="7"
+          step="1"
+          value="5"
+          placeholder="Kolik dní týdně chci pracovat? (max. 7 dní)"
+        />
+        <br />
+        <hr />
+        <label for="macDonald2">MacDonalds</label>
+        <input
+          type="checkbox"
+          id="macDonald2"
+          name="macDonald2"
+          value="macDonald"
+        />
+      </fieldset>
+      <fieldset>
+        <legend>Výsledky</legend>
+        <input type="button" value="Vypočítat" onclick="calculate2()" />
+        <p id="result2"></p>
       </fieldset>
     </form>
   </body>
